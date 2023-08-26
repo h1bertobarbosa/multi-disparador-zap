@@ -1,0 +1,59 @@
+APACHE NA VPS
+
+sudo su root
+sudo apt update
+sudo apt upgrade
+sudo apt install -y apache2 apache2-utils
+
+> alterar porta apache (/etc/apache2/port.conf)
+
+sudo systemctl restart apache2
+systemctl status apache2
+sudo systemctl enable apache2
+apache2 -v
+sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline
+sudo apt-get install php-curl
+sudo a2enmod php7.4
+sudo systemctl restart apache2
+php --version
+sudo nano /var/www/html/info.php
+<?php phpinfo(); ?>
+sudo a2dismod php7.4
+sudo apt install php7.4-fpm
+sudo a2enmod proxy_fcgi setenvif
+sudo a2enconf php7.4-fpm
+sudo systemctl restart apache2
+sudo rm /var/www/html/info.php
+sudo apt install nginx
+sudo rm /etc/nginx/sites-enabled/default
+sudo nano /etc/nginx/sites-available/phpcomunidade
+
+server {
+  server_name comunidadephp.comunidadezdg.com.br;
+  location / {
+    proxy_pass http://127.0.0.1:81;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_cache_bypass $http_upgrade;
+  }
+  }
+
+sudo ln -s /etc/nginx/sites-available/phpcomunidade /etc/nginx/sites-enabled
+sudo nginx -t
+sudo service nginx restart
+sudo nano /etc/nginx/nginx.conf
+
+client_max_body_size 50M;
+# HANDLE BIGGER UPLOADS
+
+sudo nginx -t
+sudo service nginx restart
+sudo apt-get install snapd
+sudo snap install notes
+sudo snap install --classic certbot
+sudo certbot --nginx
