@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Comunidade ZDG - https://comunidadezdg.com.br/</title>
+  <title>Humberto ZapAutomation - https://disparador.ominichat.app.br/</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
@@ -14,13 +14,13 @@
   <?php
     echo "<nav id='menu-h'>";
     echo "<ul>";
-    echo "    <li><a href='https://comunidadezdg.com.br/'>Comunidade ZDG</a></li>";
+    echo "    <li><a href='https://disparador.ominichat.app.br/'>Humberto ZapAutomation</a></li>";
 	echo "    <li><a href='index.php'>Conexões</a></li>";
 	echo "    <li><a href='index1.php'>Disparo de Texto</a></li>";
 	echo "    <li><a href='index2.php'>Disparo de Imagem URL</a></li>";
 	echo "    <li><a href='index3.php'>Disparo de Imagem PATH</a></li>";
 	echo "    <li><a href='index4.php'>Disparo de Áudio Gravado</a></li>";
-    echo "    <li><a target='_blank' href='https://comunidadezdg.com.br/'><img src='https://comunidadezdg.com.br/wp-content/uploads/elementor/thumbs/icone-p7nqaeuwl6ck4tz33sz0asflw2opfsqwutv8l3hfk0.png' style='height:20px;'><br></a></li>";
+    echo "    <li><a target='_blank' href='https://disparador.ominichat.app.br/'><img src='https://comunidadezdg.com.br/wp-content/uploads/elementor/thumbs/icone-p7nqaeuwl6ck4tz33sz0asflw2opfsqwutv8l3hfk0.png' style='height:20px;'><br></a></li>";
     echo "</ul>";
     echo "</nav>";
 	echo "<h2>Gestão de Disparos</h2>";
@@ -92,7 +92,7 @@
 	echo "<hr>";
 	echo "</form>";
 	echo "<hr>";
-	echo "<p>Desenvolvido por Comunidade ZDG</p>";
+	echo "<p>Desenvolvido por Humberto ZapAutomation</p>";
   
 
   

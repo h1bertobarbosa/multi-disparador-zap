@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Comunidade ZDG - https://comunidadezdg.com.br/</title>
+  <title>Humberto ZapAutomation</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -14,13 +14,13 @@
   <?php
     echo "<nav id='menu-h'>";
     echo "<ul>";
-    echo "    <li><a href='https://comunidadezdg.com.br/'>Comunidade ZDG</a></li>";
+    echo "    <li><a href=''>Humberto ZapAutomation</a></li>";
 	echo "    <li><a href='index.php'>Conexões</a></li>";
 	echo "    <li><a href='index1.php'>Disparo de Texto</a></li>";
 	echo "    <li><a href='index2.php'>Disparo de Imagem URL</a></li>";
 	echo "    <li><a href='index3.php'>Disparo de Imagem PATH</a></li>";
 	echo "    <li><a href='index4.php'>Disparo de Áudio Gravado</a></li>";
-    echo "    <li><a target='_blank' href='https://comunidadezdg.com.br/'><img src='https://comunidadezdg.com.br/wp-content/uploads/elementor/thumbs/icone-p7nqaeuwl6ck4tz33sz0asflw2opfsqwutv8l3hfk0.png' style='height:20px;'><br></a></li>";
+
     echo "</ul>";
     echo "</nav>";
 	echo "<h2>Gestão de Sessões</h2>";
@@ -57,7 +57,7 @@
 	}
 	function button2() {
 		$sessaoScan = $_POST['sessaoScan'];
-		$path = '/root/botzdg/qrcode/' . $sessaoScan . '/qrcode.png';
+		$path = '/home/ubuntu/multi-disparador-zap/botzdg_multisessao_post/qrcode/' . $sessaoScan . '/qrcode.png';
 		$imagedata = @file_get_contents($path);
 		if($imagedata === null){
 			echo 'QrCode OK';
@@ -85,8 +85,8 @@
 		echo "<hr>";
 	}
 	function button4() {
-		foreach(glob('/root/botzdg/qrcode/*', GLOB_ONLYDIR) as $dir) {
-			$dir = str_replace('/root/botzdg/qrcode/', '', $dir);
+		foreach(glob('/home/ubuntu/multi-disparador-zap/botzdg_multisessao_post/qrcode/*', GLOB_ONLYDIR) as $dir) {
+			$dir = str_replace('/home/ubuntu/multi-disparador-zap/botzdg_multisessao_post/qrcode/', '', $dir);
 			echo 'Sessão: ' . $dir . '<br>';
 		}
 		echo "<hr>";
