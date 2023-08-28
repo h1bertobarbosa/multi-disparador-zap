@@ -385,10 +385,11 @@ app.post(
         });
       })
       .catch((err) => {
+        console.log(err);
         res.status(500).json({
           status: false,
           message: "BOTHumberto Mensagem não enviada",
-          response: err.text,
+          response: err.message,
         });
       });
   }
