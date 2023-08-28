@@ -1,0 +1,4 @@
+node_modules/
+.wwebjs_*
+whatsapp-sessions.json
+qrcode/
