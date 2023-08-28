@@ -68,7 +68,7 @@ const criarSessao = function (id, token) {
   const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
-      //executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+      executablePath: "/usr/bin/google-chrome",
       headless: true,
       args: [
         "--no-sandbox",
