@@ -49,7 +49,7 @@
 				"token" => $token
 			];
 			curl_setopt_array($curl, array(
-			  CURLOPT_URL => 'http://localhost:8000/send-media2',
+			  CURLOPT_URL => 'https://manager.ominichat.app.br/send-media2',
 			  CURLOPT_RETURNTRANSFER => true,
 			  CURLOPT_ENCODING => '',
 			  CURLOPT_MAXREDIRS => 10,

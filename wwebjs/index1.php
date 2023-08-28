@@ -47,7 +47,7 @@
 				"token" => $token
 			];
 			curl_setopt_array($curl, array(
-			  CURLOPT_URL => 'http://localhost:8000/send-message',
+			  CURLOPT_URL => 'https://manager.ominichat.app.br/send-message',
 			  CURLOPT_RETURNTRANSFER => true,
 			  CURLOPT_ENCODING => '',
 			  CURLOPT_MAXREDIRS => 10,

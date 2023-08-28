@@ -44,7 +44,7 @@
 	function button1() {
 		$token = $_POST['token'];
 		$sessao = $_POST['sessao'];
-		$url = "http://localhost:8000/criar-sessao";	
+		$url = "https://manager.ominichat.app.br/criar-sessao";	
 		$ch = curl_init( $url );
 		$payload = json_encode( array( "id" => $sessao, "token" => $token) );
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
@@ -73,7 +73,7 @@
 	function button3() {
 		$sessaoDel = $_POST['sessaoDel'];
 		$tokenDel = $_POST['tokenDel'];
-		$url = "http://localhost:8000/deletar-sessao";	
+		$url = "https://manager.ominichat.app.br/deletar-sessao";	
 		$ch = curl_init( $url );
 		$payload = json_encode( array( "id" => $sessaoDel, "token" => $tokenDel) );
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
@@ -94,7 +94,7 @@
 	function button5() {
 		$tokenStatus = $_POST['tokenStatus'];
 		$sessaoStatus = $_POST['sessaoStatus'];
-		$url = "http://localhost:8000/status-sessao";	
+		$url = "https://manager.ominichat.app.br/status-sessao";	
 		$ch = curl_init( $url );
 		$payload = json_encode( array( "id" => $sessaoStatus, "token" => $tokenStatus) );
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
