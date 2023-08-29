@@ -20,7 +20,7 @@ const criarSessao = function (id, token) {
   const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
-      //executablePath: "/usr/bin/google-chrome",
+      executablePath: "/usr/bin/google-chrome",
       headless: true,
       args: [
         "--no-sandbox",
